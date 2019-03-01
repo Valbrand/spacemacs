@@ -13,6 +13,7 @@
     smartparens
     subword
     org
+    parinfer
     ))
 
 (defun clojure/init-cider ()
@@ -301,3 +302,7 @@
   (spacemacs|use-package-add-hook org
     :post-config (add-to-list 'org-babel-load-languages '(clojure . t))
     (setq org-babel-clojure-backend 'cider)))
+
+(defun clojure/post-init-parinfer ()
+  (spacemacs|forall-clojure-modes m
+    (add-hook m 'parinfer-mode)))
