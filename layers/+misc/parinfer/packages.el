@@ -18,6 +18,15 @@
     :diminish parinfer-mode
     :init
     (progn
+      ;(add-hook 'emacs-lisp-mode-hook 'parinfer-mode)
+      ;(add-hook 'clojure-mode-hook 'parinfer-mode)
+      ;(add-hook 'clojurescript-mode-hook 'parinfer-mode)
+      ;(add-hook 'clojurec-mode-hook 'parinfer-mode)
+      ;(add-hook 'clojurex-mode-hook 'parinfer-mode)
+      ;(add-hook 'cider-mode-hook 'parinfer-mode)
+      ;(add-hook 'common-lisp-mode-hook 'parinfer-mode)
+      ;(add-hook 'scheme-mode-hook 'parinfer-mode)
+      ;(add-hook 'lisp-mode-hook 'parinfer-mode)
       (spacemacs|add-toggle parinfer-indent
         :evil-leader "tP"
         :documentation "Enable Parinfer Indent Mode."

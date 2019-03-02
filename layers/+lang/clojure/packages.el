@@ -1,20 +1,19 @@
 (setq clojure-packages
-  '(
-    cider
-    cider-eval-sexp-fu
-    clj-refactor
-    clojure-mode
-    (clojure-snippets :toggle (configuration-layer/layer-usedp 'auto-completion))
-    company
-    eldoc
-    ggtags
-    helm-gtags
-    popwin
-    smartparens
-    subword
-    org
-    parinfer
-    ))
+      '(
+        cider
+        cider-eval-sexp-fu
+        clj-refactor
+        clojure-mode
+        (clojure-snippets :toggle (configuration-layer/layer-usedp 'auto-completion))
+        company
+        eldoc
+        ggtags
+        helm-gtags
+        popwin
+        smartparens
+        subword
+        org
+        ))
 
 (defun clojure/init-cider ()
   (use-package cider
@@ -302,7 +301,3 @@
   (spacemacs|use-package-add-hook org
     :post-config (add-to-list 'org-babel-load-languages '(clojure . t))
     (setq org-babel-clojure-backend 'cider)))
-
-(defun clojure/post-init-parinfer ()
-  (spacemacs|forall-clojure-modes m
-    (add-hook m 'parinfer-mode)))
